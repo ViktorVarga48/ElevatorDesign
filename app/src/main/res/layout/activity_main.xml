@@ -126,7 +126,7 @@
             app:layout_constraintVertical_bias="0.998" />
 
         <ImageView
-            android:id="@+id/vytah"
+            android:id="@+id/elevator"
             android:layout_width="113dp"
             android:layout_height="94dp"
             android:controlX1="0"

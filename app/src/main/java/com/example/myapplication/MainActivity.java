@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -18,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button button3;
     Button button4;
     Button button5;
-    ImageView vytah;
+    ImageView elevator;
     int currentFloor = 0;
     int moveToFloor;
 
@@ -26,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //button2 = new Button(this)
-        //vytah = new ImageView(this);
-        vytah = (ImageView) findViewById(R.id.vytah);
+        elevator = (ImageView) findViewById(R.id.elevator);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
@@ -40,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 moveToFloor = 1;
                 float distance = getFloorDifference(moveToFloor);
-                ObjectAnimator a = ObjectAnimator.ofFloat(vytah, "y", vytah.getY()+distance);
+                ObjectAnimator a = ObjectAnimator.ofFloat(elevator, "y", elevator.getY()+distance);
                 a.setDuration(4000);
                 a.start();
                 currentFloor = moveToFloor;
@@ -53,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 moveToFloor = 2;
                 float distance = getFloorDifference(moveToFloor);
-                ObjectAnimator a = ObjectAnimator.ofFloat(vytah, "y", vytah.getY()+distance);
+                ObjectAnimator a = ObjectAnimator.ofFloat(elevator, "y", elevator.getY()+distance);
                 a.setDuration(4000);
                 a.start();
                 currentFloor = moveToFloor;
@@ -66,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 moveToFloor = 0;
                 float distance = getFloorDifference(moveToFloor);
-                ObjectAnimator a = ObjectAnimator.ofFloat(vytah, "y", vytah.getY()+distance);
+                ObjectAnimator a = ObjectAnimator.ofFloat(elevator, "y", elevator.getY()+distance);
                 a.setDuration(4000);
                 a.start();
                 currentFloor = moveToFloor;
@@ -81,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 moveToFloor = 3;
                 float distance = getFloorDifference(moveToFloor);
-                ObjectAnimator a = ObjectAnimator.ofFloat(vytah, "y", vytah.getY()+distance);
+                ObjectAnimator a = ObjectAnimator.ofFloat(elevator, "y", elevator.getY()+distance);
                 a.setDuration(4000);
                 a.start();
                 currentFloor = moveToFloor;
@@ -96,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 moveToFloor = 4;
                 float distance = getFloorDifference(moveToFloor);
-                ObjectAnimator a = ObjectAnimator.ofFloat(vytah, "y", vytah.getY()+distance);
+                ObjectAnimator a = ObjectAnimator.ofFloat(elevator, "y", elevator.getY()+distance);
                 a.setDuration(4000);
                 a.start();
                 currentFloor = moveToFloor;
